@@ -9,10 +9,9 @@ RUN : \
       openssh-server \
       openssh-clients \
       ca-certificates \
-      hg \
       git \
-      make \
-      python \
+      zlib-devel ruby ruby-devel gem firefox libXtst-devel xorg-x11-server-Xvfb \
+      gem install bundler --no-ri --no-rdoc
  && dnf groupinstall -y "C Development Tools and Libraries" \
  && dnf groupinstall -y "Development Tools" \
  && dnf groupinstall -y "RPM Development Tools" \
