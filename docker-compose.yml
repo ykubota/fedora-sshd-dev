@@ -1,0 +1,10 @@
+version: "1"
+services:
+  shellgei:
+    build: .
+    image: ykubota/fedora-temporal-dev
+    container_name: tmpdev
+    environment:
+      - SSHKEY
+    ports:
+      - "2222:22"
