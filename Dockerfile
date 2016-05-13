@@ -15,7 +15,7 @@ RUN : \
  && dnf groupinstall -y "C Development Tools and Libraries" \
  && dnf groupinstall -y "Development Tools" \
  && dnf groupinstall -y "RPM Development Tools" \
- && hg clone hg.openjdk.java.net/jdk9 \
+ && hg clone http://hg.openjdk.java.net/jdk9 \
  && cd jdk9 \
  && bash get_source.sh \
  && :
