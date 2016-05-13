@@ -18,5 +18,5 @@ RUN : \
  && dnf groupinstall -y "RPM Development Tools" \
  && /usr/bin/ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -C '' -N '' \
  && /usr/bin/ssh-keygen -t rsa -f /etc/ssh/ssh_host_dsa_key -C '' -N '' \
- && EXPOSE 22
  && :
+EXPOSE 22
