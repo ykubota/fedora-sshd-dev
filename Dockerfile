@@ -7,6 +7,7 @@ RUN : \
  && dnf update -y \
  && dnf install -y \
       openssh-server \
+      openssh-clients \
       ca-certificates \
       hg \
       git \
@@ -15,7 +16,7 @@ RUN : \
  && dnf groupinstall -y "C Development Tools and Libraries" \
  && dnf groupinstall -y "Development Tools" \
  && dnf groupinstall -y "RPM Development Tools" \
- && hg clone http://hg.openjdk.java.net/jdk9/dev jdk9-dev \
- && cd jdk9-dev \
- && bash get_source.sh \
+ && /usr/bin/ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -C '' -N '' \
+ && /usr/bin/ssh-keygen -t rsa -f /etc/ssh/ssh_host_dsa_key -C '' -N '' \
+ && EXPOSE 22
  && :
